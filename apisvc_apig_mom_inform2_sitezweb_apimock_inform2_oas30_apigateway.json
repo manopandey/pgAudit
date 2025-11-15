@@ -1,0 +1,1907 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "apisvc-apig-mom-inform2-sitezweb-apimock",
+    "version" : "2025-07-08T05:00:14Z"
+  },
+  "servers" : [ {
+    "url" : "https://v9j7tl16kj.execute-api.ap-southeast-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : "inform2"
+      }
+    }
+  } ],
+  "paths" : {
+    "/RDI/AddressById" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"IdNo\": 7254611,\r\n        \"CreatedDate\": \"2003-12-17T00:00:00.000Z\",\r\n        \"CreatedBy\": 999999999999,\r\n        \"LocalStreetName\": \"GUL ROAD\",\r\n        \"Version\": 290,\r\n        \"AddressId\": 7254611,\r\n        \"LastModifiedBy\": 900000001432,\r\n        \"StartDate\": \"2003-12-13T00:00:00.000Z\",\r\n        \"BlkHouseNo\": \"50\",\r\n        \"SingpostAddressType\": \"S\",\r\n        \"PostalCode\": \"629351\",\r\n        \"AddressType\": \"C\",\r\n        \"StreetCode\": \"GUL03M\",\r\n        \"LastModifiedDate\": \"2008-05-03T00:04:38.000Z\",\r\n        \"AddressCategory\": \"2\"\r\n    }\r\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/MIWA/searchAddresses/vessel" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\"results\":[{\"addressType\":\"VESSEL\",\"addressInfo\":{\"licenseNumber\":\"CRAFT_NO 110\",\"vesselName\":\"CRAFTNAME 20\"}}]}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updateSpecialPassExtensionIssuance" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:impl=\"http://impl.service.casemgmt.csm.app.interfaces.inform.mom.gov.sg\" xmlns:xsd=\"http://csm.app.interfaces.inform.mom.gov.sg/xsd\" xmlns:xsd1=\"http://model.casemgmt.csm.app.interfaces.inform.mom.gov.sg/xsd\">\n   <soap:Header/>\n   <soap:Body>\n      <impl:updateSpecialPassExtensionIssuanceResponse>\n         <!--Optional:-->\n         <impl:return>\n            <!--Zero or more repetitions:-->\n            <xsd:errors>\n               <!--Optional:-->\n               <xsd:errorCode></xsd:errorCode>\n               <!--Optional:-->\n               <xsd:errorMsg>Invalid SP number is passsed</xsd:errorMsg>\n            </xsd:errors>\n            <!--Optional:-->\n            <xsd:status>Error</xsd:status>\n            <!--Optional:-->\n            <xsd1:errorCode></xsd1:errorCode>\n            <!--Optional:-->\n            <xsd1:errorMsg></xsd1:errorMsg>\n            <!--Optional:-->\n            <xsd1:spNo></xsd1:spNo>\n            <!--Optional:-->\n            <xsd1:status></xsd1:status>\n         </impl:return>\n      </impl:updateSpecialPassExtensionIssuanceResponse>\n   </soap:Body>\n</soap:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/PostInformNRR" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n\"Token\": \"q0aumd46gu\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updBlckInfoRequest" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n      <ns1:updBlckInfoRequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n         <updBlckInfoRequestReturn xsi:type=\"ns2:updateSPResponseVO\" xmlns:ns2=\"urn:updateSPResponseVO\">\n            <errorCode xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">005</errorCode>\n            <errorMsg xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">Invalid SP status</errorMsg>\n            <spNo xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">AA000355</spNo>\n            <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">F</status>\n         </updBlckInfoRequestReturn>\n      </ns1:updBlckInfoRequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/querySPInfoRequest" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n      <ns1:querySPInfoRequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n         <querySPInfoRequestReturn xsi:type=\"ns2:querySPResponseVO\" xmlns:ns2=\"urn:querySPResponseVO\">\n            <errorCode xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <errorMsg xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <expiryDt xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">18/08/2021</expiryDt>\n            <issueDt xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">04/08/2021</issueDt>\n            <reason xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">13</reason>\n            <spStatus xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">A</spStatus>\n            <state xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">ISPS</state>\n            <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">S</status>\n         </querySPInfoRequestReturn>\n      </ns1:querySPInfoRequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/SingpostByPostalCode" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\n    {\n        \"PostalCode\": \"6500827\",\n        \"AddressType\": \"HDB\",\n        \"BuildingNo\": \"233\",\n        \"StreetName\": \"Dempsey St\",\n        \"BuildingName\": \"Skyline\"\n    }\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updSPRnwIndRequest" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n     <ns1:updSPRnwIndRequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n     <updSPRnwIndRequestReturn xsi:type=\"ns2:updateSPResponseVO\" xmlns:ns2=\"urn:updateSPResponseVO\">\n        <errorCode xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">004</errorCode>\n        <errorMsg xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">SP not exists</errorMsg>\n        <spNo xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">AA000390</spNo>\n        <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">F</status>\n     </updSPRnwIndRequestReturn></ns1:updSPRnwIndRequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WinsWorkerContactInfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"EmployeeMobileNo\": \"93974295\",\r\n        \"EmployerMobileNo\": \" \",\r\n        \"UpdatedDateTime\": \"2019-11-28T12:54:45.000Z\",\r\n        \"FIN\": \"F0012749M\",\r\n        \"Email\": \"CPM.MEI@YAHOO.COM\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/iWORK/InformSendIPInfo" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n    \"ReturnCode\": \"00\",\r\n    \"ReturnMessage\": \"Successful\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/MIWA/searchAddresses/overseas" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/iWPS/Lift-Worker-BL002" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<LiftWorkerBLResponse>\r\n<STATUS>true</STATUS>\r\n<ERROR_MESSAGE></ERROR_MESSAGE>\r\n</LiftWorkerBLResponse>\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WinsWorkerBasicInfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"PassportNo\": \"A50816686\",\r\n        \"MaritalStatus\": \"2\",\r\n        \"Gender\": \"F\",\r\n        \"NameOfApplicant\": \"EP F0012749M\",\r\n        \"UpdatedDateTime\": \"2021-09-22T17:43:16.576Z\",\r\n        \"FIN\": \"F0012749M\",\r\n        \"Nationality\": \"MY\",\r\n        \"DateOfBirth\": \"1951-05-18T00:00:00.000Z\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/MIWA/searchAddresses/others" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/MIWA/searchAddresses/Dormitory" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\"results\":[{\"addressType\":\"DORMITORY\",\"addressInfo\":{\"dormitoryId\":\"DORM-04454\",\"licenseeName\":\"NOT ME\",\"addressDetail\":\"3 KALLANG AVE #01-130 SINGAPORE 339408\"}}]}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/closeSPRequest" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n      <ns1:closeSPRequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n         <closeSPRequestReturn xsi:type=\"ns2:closeSPResponseVO\" xmlns:ns2=\"urn:closeSPResponseVO\">\n            <errorCode xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">001</errorCode>\n            <errorMsg xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">Error while updating IWPS and ISPS table.</errorMsg>\n            <spNo xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">AA000179</spNo>\n            <spStatus xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">F</status>\n         </closeSPRequestReturn>\n      </ns1:closeSPRequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/IndividualWpInform" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"Sex\": \"2\",\r\n        \"LastModifiedDate\": \"2021-11-05T16:53:10.000Z\",\r\n        \"DeleteInd\": \"F\",\r\n        \"MyOldICNo\": \"A0077259\",\r\n        \"NameOfApplicant\": \"CHEW YIN Masked\",\r\n        \"Passport\": \"A36782562\",\r\n        \"Race\": \"3\",\r\n        \"PassportExpiryDate\": \"2021-04-13T00:00:00.000Z\",\r\n        \"DateOfBirth\": \"1965-02-15T00:00:00.000Z\",\r\n        \"FIN\": \"F1060207Q\",\r\n        \"WpNo\": \"5 0077259-\",\r\n        \"MyNewICNo\": \"650215086126\",\r\n        \"Nationality\": \"MY\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/IndividualWpiWORK" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"UEN\": \"199002325Z\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"41001\",\r\n        \"LastModifiedDate\": \"2022-02-20T21:09:40.000Z\",\r\n        \"MonthlyDeductions\": 0,\r\n        \"WpNo\": \"0 34608261\",\r\n        \"CpfNo\": \"6100600\",\r\n        \"OtherDeductions\": 0,\r\n        \"ROCBNo\": \"199002325Z\",\r\n        \"IssueDate\": \"2020-03-12T00:00:00.000Z\",\r\n        \"MonthlyIncome\": 468,\r\n        \"DateOfApplication\": \"2020-02-20T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"OtherAllowances\": 0,\r\n        \"EmployerAddress\": \"6 ALJUNIED AVENUE 3 #04-00FOLEC TECHNOLOGIES CENTRE SINGAPORE 389932\",\r\n        \"RenewalDate\": \"2021-02-24T00:00:00.000Z\",\r\n        \"MonthlyAllowances\": 0,\r\n        \"EntityName\": \"GUTHRIE FMC PTE. LTD.\",\r\n        \"TpDate\": \"2020-03-06T00:00:00.000Z\",\r\n        \"ExpiryDate\": \"2022-02-20T00:00:00.000Z\",\r\n        \"FixedMonthlySalary\": 468,\r\n        \"NetMonthlySalary\": 468,\r\n        \"AddressCategory\": \"2\",\r\n        \"HousingAmenitiesSvsDeductions\": 0,\r\n        \"TransportAllowances\": 0,\r\n        \"PassStatus\": \"E\",\r\n        \"HousingAllowances\": 0,\r\n        \"WorkerArrivalDate\": \"2020-03-05T00:00:00.000Z\",\r\n        \"Occupation\": \"72413\",\r\n        \"HousingAmenitiesSvsAllowances\": 0\r\n    },\r\n    {\r\n        \"UEN\": \"199002325Z\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"41001\",\r\n        \"LastModifiedDate\": \"2020-02-07T12:08:20.000Z\",\r\n        \"WpNo\": \"0 34608261\",\r\n        \"CpfNo\": \"6100600\",\r\n        \"ROCBNo\": \"199002325Z\",\r\n        \"MonthlyIncome\": 468,\r\n        \"DateOfApplication\": \"2020-02-07T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"EmployerAddress\": \"6 ALJUNIED AVENUE 3 #04-00FOLEC TECHNOLOGIES CENTRE SINGAPORE 389932\",\r\n        \"MonthlyAllowances\": 0,\r\n        \"EntityName\": \"GUTHRIE FMC PTE. LTD.\",\r\n        \"FixedMonthlySalary\": 468,\r\n        \"NetMonthlySalary\": 468,\r\n        \"AddressCategory\": \"2\",\r\n        \"PassStatus\": \"R\",\r\n        \"DecisionReason\": \"305A\",\r\n        \"Occupation\": \"72413\"\r\n    },\r\n    {\r\n        \"UEN\": \"200300602W\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"43210\",\r\n        \"RevokeCancelDate\": \"2020-02-20T00:00:00.000Z\",\r\n        \"LastModifiedDate\": \"2020-02-20T10:33:28.000Z\",\r\n        \"WpNo\": \"0 34608261\",\r\n        \"CpfNo\": \"2918153\",\r\n        \"ROCBNo\": \"200300602W\",\r\n        \"MonthlyIncome\": 900,\r\n        \"DateOfApplication\": \"2020-01-30T00:00:00.000Z\",\r\n        \"ApplicationType\": \"C\",\r\n        \"EmployerAddress\": \"67 UBI CRESCENT #03-11TECHNIQUES CENTRE SINGAPORE 408560\",\r\n        \"CancellationReason\": \"927\",\r\n        \"EntityName\": \"LINK ELECTRICAL PTE. LTD.\",\r\n        \"FixedMonthlySalary\": 900,\r\n        \"NetMonthlySalary\": 900,\r\n        \"AddressCategory\": \"2\",\r\n        \"PassStatus\": \"D\",\r\n        \"DecisionReason\": \"842A\",\r\n        \"HousingAllowances\": 0,\r\n        \"Occupation\": \"72413\",\r\n        \"CancellationUserOrg\": \"LINK ELECTRICAL PTE. LTD.\"\r\n    },\r\n    {\r\n        \"UEN\": \"200300602W\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"43210\",\r\n        \"LastModifiedDate\": \"2020-01-29T14:23:32.000Z\",\r\n        \"WpNo\": \"0 34608261\",\r\n        \"CpfNo\": \"2918153\",\r\n        \"ROCBNo\": \"200300602W\",\r\n        \"MonthlyIncome\": 900,\r\n        \"DateOfApplication\": \"2020-01-29T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"EmployerAddress\": \"67 UBI CRESCENT #03-11TECHNIQUES CENTRE SINGAPORE 408560\",\r\n        \"MonthlyAllowances\": 0,\r\n        \"EntityName\": \"LINK ELECTRICAL PTE. LTD.\",\r\n        \"FixedMonthlySalary\": 900,\r\n        \"NetMonthlySalary\": 900,\r\n        \"AddressCategory\": \"2\",\r\n        \"PassStatus\": \"R\",\r\n        \"DecisionReason\": \"127C;305A\",\r\n        \"Occupation\": \"72413\"\r\n    },\r\n    {\r\n        \"UEN\": \"200919054D\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"41001\",\r\n        \"RevokeCancelDate\": \"2020-02-11T00:00:00.000Z\",\r\n        \"LastModifiedDate\": \"2020-06-02T07:31:09.000Z\",\r\n        \"MonthlyDeductions\": 500,\r\n        \"WpNo\": \"0 34608261\",\r\n        \"ActualDepartDate\": \"2020-02-11T00:00:00.000Z\",\r\n        \"CpfNo\": \"G119820\",\r\n        \"OtherDeductions\": 250,\r\n        \"ROCBNo\": \"200919054D\",\r\n        \"IssueDate\": \"2019-03-26T00:00:00.000Z\",\r\n        \"MonthlyIncome\": 800,\r\n        \"DateOfApplication\": \"2018-12-27T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"OtherAllowances\": 300,\r\n        \"EmployerAddress\": \"21 QUEEN'S CLOSE #12-137 SINGAPORE 140021\",\r\n        \"MonthlyAllowances\": 800,\r\n        \"CancellationReason\": \"950\",\r\n        \"EntityName\": \"NS ENTERPRICES PTE. LTD.\",\r\n        \"TpDate\": \"2019-03-20T00:00:00.000Z\",\r\n        \"ExpiryDate\": \"2021-03-07T00:00:00.000Z\",\r\n        \"FixedMonthlySalary\": 1600,\r\n        \"NetMonthlySalary\": 1100,\r\n        \"AddressCategory\": \"2\",\r\n        \"HousingAmenitiesSvsDeductions\": 250,\r\n        \"TransportAllowances\": 200,\r\n        \"PassStatus\": \"C\",\r\n        \"DecisionReason\": \"842C\",\r\n        \"WorkerArrivalDate\": \"2019-03-19T00:00:00.000Z\",\r\n        \"Occupation\": \"93300A\",\r\n        \"HousingAmenitiesSvsAllowances\": 300,\r\n        \"CancellationUserOrg\": \"NS ENTERPRICES PTE. LTD.\"\r\n    },\r\n    {\r\n        \"UEN\": \"201510554Z\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"41001\",\r\n        \"RevokeCancelDate\": \"2018-12-06T00:00:00.000Z\",\r\n        \"LastModifiedDate\": \"2018-12-06T18:31:58.000Z\",\r\n        \"MonthlyDeductions\": 500,\r\n        \"WpNo\": \"0 34608261\",\r\n        \"CpfNo\": \"8624666\",\r\n        \"OtherDeductions\": 300,\r\n        \"ROCBNo\": \"201510554Z\",\r\n        \"MonthlyIncome\": 800,\r\n        \"DateOfApplication\": \"2018-10-20T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"OtherAllowances\": 300,\r\n        \"EmployerAddress\": \"53 WOODLANDS INDUSTRIAL PARK E2 #00-00NORDIX SINGAPORE 757473\",\r\n        \"MonthlyAllowances\": 800,\r\n        \"CancellationReason\": \"927\",\r\n        \"EntityName\": \"HH INTEGRATED PTE. LTD.\",\r\n        \"FixedMonthlySalary\": 1600,\r\n        \"NetMonthlySalary\": 1100,\r\n        \"AddressCategory\": \"2\",\r\n        \"HousingAmenitiesSvsDeductions\": 200,\r\n        \"TransportAllowances\": 200,\r\n        \"PassStatus\": \"D\",\r\n        \"DecisionReason\": \"842C\",\r\n        \"Occupation\": \"72413\",\r\n        \"HousingAmenitiesSvsAllowances\": 300,\r\n        \"CancellationUserOrg\": \"HH INTEGRATED PTE. LTD.\"\r\n    },\r\n    {\r\n        \"UEN\": \"201318783Z\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"43210\",\r\n        \"RevokeCancelDate\": \"2018-01-02T00:00:00.000Z\",\r\n        \"LastModifiedDate\": \"2018-01-11T12:06:45.000Z\",\r\n        \"WpNo\": \"0 34608261\",\r\n        \"ActualDepartDate\": \"2018-05-03T00:00:00.000Z\",\r\n        \"ReinstatementDate\": \"2017-11-01T00:00:00.000Z\",\r\n        \"CpfNo\": \"6856020\",\r\n        \"ROCBNo\": \"201318783Z\",\r\n        \"IssueDate\": \"2017-07-05T00:00:00.000Z\",\r\n        \"MonthlyIncome\": 1000,\r\n        \"DateOfApplication\": \"2017-06-30T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"OtherAllowances\": 600,\r\n        \"EmployerAddress\": \"11 WOODLANDS CLOSE #08-48WOODLANDS 11 SINGAPORE 737853\",\r\n        \"MonthlyAllowances\": 600,\r\n        \"CancellationReason\": \"020\",\r\n        \"EntityName\": \"EXPRESS POINT ENGINEERING & SERVICES PTE. LTD.\",\r\n        \"ExpiryDate\": \"2018-05-19T00:00:00.000Z\",\r\n        \"FixedMonthlySalary\": 1600,\r\n        \"NetMonthlySalary\": 1600,\r\n        \"AddressCategory\": \"2\",\r\n        \"PassStatus\": \"W\",\r\n        \"DecisionReason\": \"842C\",\r\n        \"Occupation\": \"72413\"\r\n    },\r\n    {\r\n        \"UEN\": \"201318783Z\",\r\n        \"EmployerContact\": \"66666666\",\r\n        \"Industry\": \"43210\",\r\n        \"RevokeCancelDate\": \"2018-01-02T00:00:00.000Z\",\r\n        \"LastModifiedDate\": \"2018-01-11T12:06:45.000Z\",\r\n        \"WpNo\": \"0 34608261\",\r\n        \"ReinstatementDate\": \"2017-11-01T00:00:00.000Z\",\r\n        \"CpfNo\": \"6856020\",\r\n        \"ROCBNo\": \"201318783Z\",\r\n        \"IssueDate\": \"2017-07-05T00:00:00.000Z\",\r\n        \"MonthlyIncome\": 1000,\r\n        \"DateOfApplication\": \"2017-06-30T00:00:00.000Z\",\r\n        \"ApplicationType\": \"A\",\r\n        \"OtherAllowances\": 600,\r\n        \"EmployerAddress\": \"11 WOODLANDS CLOSE #08-48WOODLANDS 11 SINGAPORE 737853\",\r\n        \"MonthlyAllowances\": 600,\r\n        \"CancellationReason\": \"020\",\r\n        \"EntityName\": \"EXPRESS POINT ENGINEERING & SERVICES PTE. LTD.\",\r\n        \"ExpiryDate\": \"2018-05-19T00:00:00.000Z\",\r\n        \"FixedMonthlySalary\": 1600,\r\n        \"NetMonthlySalary\": 1600,\r\n        \"AddressCategory\": \"2\",\r\n        \"PassStatus\": \"W\",\r\n        \"DecisionReason\": \"842C\",\r\n        \"Occupation\": \"72413\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/IndividualWPEmploymentHistory" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\n    {\n        \"spec\": \"not provided\"\n    }\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updateSpecialPassClosure" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:impl=\"http://impl.service.casemgmt.csm.app.interfaces.inform.mom.gov.sg\" xmlns:xsd=\"http://csm.app.interfaces.inform.mom.gov.sg/xsd\" xmlns:xsd1=\"http://model.casemgmt.csm.app.interfaces.inform.mom.gov.sg/xsd\">\n   <soap:Header/>\n   <soap:Body>\n      <impl:updateSpecialPassClosureResponse>\n         <!--Optional:-->\n         <impl:return>\n            <!--Zero or more repetitions:-->\n            <xsd:errors>\n               <!--Optional:-->\n               <xsd:errorCode></xsd:errorCode>\n               <!--Optional:-->\n               <xsd:errorMsg></xsd:errorMsg>\n            </xsd:errors>\n            <!--Optional:-->\n            <xsd:status>Success</xsd:status>\n            <!--Optional:-->\n            <xsd1:errorCode></xsd1:errorCode>\n            <!--Optional:-->\n            <xsd1:errorMsg></xsd1:errorMsg>\n            <!--Optional:-->\n            <xsd1:spNo></xsd1:spNo>\n            <!--Optional:-->\n            <xsd1:status></xsd1:status>\n         </impl:return>\n      </impl:updateSpecialPassClosureResponse>\n   </soap:Body>\n</soap:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/iWORK/InformSendBCAInfo" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n    \"ReturnCode\": \"00\",\r\n    \"ReturnMessage\": \"Successful\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WinsApplicationQualificationInfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"FIN\": \"G3810104N\",\r\n        \"ApplicationId\": 391134,\r\n        \"StudyMode\": \"DL\",\r\n        \"IsStudyAtMainCampus\": 0,\r\n        \"Faculty\": \" \",\r\n        \"AwardingCountry\": \"JP\",\r\n        \"EndDate\": \"1900-01-01T00:00:00.000Z\",\r\n        \"AwardingSchool\": \"ZZZZZZZZ\",\r\n        \"Qualification\": \"0091Z004\",\r\n        \"IsAttendedAwardngSchool\": 0,\r\n        \"StartDate\": \"2016-08-01T00:00:00.000Z\"\r\n    },\r\n    {\r\n        \"FIN\": \"G3810104N\",\r\n        \"ApplicationId\": 392072,\r\n        \"StudyMode\": \"FT\",\r\n        \"IsStudyAtMainCampus\": 0,\r\n        \"Faculty\": \" \",\r\n        \"AwardingCountry\": \"AU\",\r\n        \"EndDate\": \"2018-02-01T00:00:00.000Z\",\r\n        \"AwardingSchool\": \"ZZZZZZZZ\",\r\n        \"Qualification\": \"0070Z002\",\r\n        \"IsAttendedAwardngSchool\": 0,\r\n        \"StartDate\": \"2014-09-01T00:00:00.000Z\"\r\n    },\r\n    {\r\n        \"FIN\": \"G3810104N\",\r\n        \"ApplicationId\": 392242,\r\n        \"StudyMode\": \"FT\",\r\n        \"IsStudyAtMainCampus\": 0,\r\n        \"Faculty\": \" \",\r\n        \"AwardingCountry\": \"AU\",\r\n        \"EndDate\": \"2018-02-01T00:00:00.000Z\",\r\n        \"AwardingSchool\": \"ZZZZZZZZ\",\r\n        \"Qualification\": \"0070Z002\",\r\n        \"IsAttendedAwardngSchool\": 0,\r\n        \"StartDate\": \"2014-09-01T00:00:00.000Z\"\r\n    },\r\n    {\r\n        \"FIN\": \"G3810104N\",\r\n        \"ApplicationId\": 800014255420,\r\n        \"EndDate\": \"1900-01-01T00:00:00.000Z\",\r\n        \"Qualification\": \"70\",\r\n        \"StartDate\": \"1900-01-01T00:00:00.000Z\"\r\n    },\r\n    {\r\n        \"FIN\": \"G3810104N\",\r\n        \"ApplicationId\": 391891,\r\n        \"StudyMode\": \"FT\",\r\n        \"IsStudyAtMainCampus\": 0,\r\n        \"Faculty\": \" \",\r\n        \"AwardingCountry\": \"AU\",\r\n        \"EndDate\": \"2018-02-01T00:00:00.000Z\",\r\n        \"AwardingSchool\": \"ZZZZZZZZ\",\r\n        \"Qualification\": \"0070Z002\",\r\n        \"IsAttendedAwardngSchool\": 0,\r\n        \"StartDate\": \"2014-09-01T00:00:00.000Z\"\r\n    },\r\n    {\r\n        \"FIN\": \"G3810104N\",\r\n        \"ApplicationId\": 800014232109,\r\n        \"AwardingCountry\": \"FI\",\r\n        \"EndDate\": \"1900-01-01T00:00:00.000Z\",\r\n        \"Qualification\": \"70\",\r\n        \"StartDate\": \"1900-01-01T00:00:00.000Z\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WpContactInfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"FaxNo\": 66666666,\r\n        \"ContactId\": 15184727,\r\n        \"DeleteInd\": \"F\",\r\n        \"LastModifiedDate\": \"2021-03-10T13:27:42.000Z\",\r\n        \"HpNo\": 99999999,\r\n        \"Version\": 2,\r\n        \"ContactType\": \"C\",\r\n        \"LandLineTelNo\": 66666666,\r\n        \"LastModifiedBy\": 10114,\r\n        \"IdNo\": 15184727,\r\n        \"CreatedDate\": \"2003-12-17T00:00:00.000Z\",\r\n        \"CreatedBy\": 999999999999,\r\n        \"EmailAddress\": \"wpdtest@mom.gov.sg\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updateSpecialPassIssuance" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:impl=\"http://impl.service.casemgmt.csm.app.interfaces.inform.mom.gov.sg\" xmlns:xsd=\"http://csm.app.interfaces.inform.mom.gov.sg/xsd\" xmlns:xsd1=\"http://model.casemgmt.csm.app.interfaces.inform.mom.gov.sg/xsd\">\n <soapenv:Header/>\n <soapenv:Body>\n  <impl:updateSpecialPassIssuanceResponse>\n   <!--Optional:-->\n   <impl:return>\n    <!--Zero or more repetitions:-->\n    <xsd:errors>\n     <!--Optional:-->\n     <xsd:errorCode></xsd:errorCode>\n     <!--Optional:-->\n     <xsd:errorMsg></xsd:errorMsg>\n    </xsd:errors>\n    <!--Optional:-->\n    <xsd:status>Success</xsd:status>\n    <!--Optional:-->\n    <xsd1:errorCode></xsd1:errorCode>\n    <!--Optional:-->\n    <xsd1:errorMsg></xsd1:errorMsg>\n    <!--Optional:-->\n    <xsd1:spNo></xsd1:spNo>\n    <!--Optional:-->\n    <xsd1:status></xsd1:status>\n   </impl:return>\n  </impl:updateSpecialPassIssuanceResponse>\n </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/EmployerTWFCount" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : " [\r\n    {\r\n        \"MasterLWF\": 3258,\r\n        \"RPass\": 184,\r\n        \"YearMonthDate\": \"20220609\",\r\n        \"SPass\": 194,\r\n        \"LastModifiedDate\": \"2022-06-09T20:11:28.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 3258,\r\n        \"RPass\": 185,\r\n        \"YearMonthDate\": \"20220603\",\r\n        \"SPass\": 194,\r\n        \"LastModifiedDate\": \"2022-06-04T01:03:11.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 3258,\r\n        \"RPass\": 67,\r\n        \"YearMonthDate\": \"20221229\",\r\n        \"SPass\": 194,\r\n        \"LastModifiedDate\": \"2022-12-29T22:48:58.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 3258,\r\n        \"RPass\": 84,\r\n        \"YearMonthDate\": \"20221207\",\r\n        \"SPass\": 194,\r\n        \"LastModifiedDate\": \"2022-12-07T23:58:32.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 3258,\r\n        \"RPass\": 88,\r\n        \"YearMonthDate\": \"20221203\",\r\n        \"SPass\": 194,\r\n        \"LastModifiedDate\": \"2022-12-06T00:54:03.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 3258,\r\n        \"RPass\": 103,\r\n        \"YearMonthDate\": \"20221103\",\r\n        \"SPass\": 194,\r\n        \"LastModifiedDate\": \"2022-11-03T19:12:34.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 0,\r\n        \"RPass\": 0,\r\n        \"YearMonthDate\": \"20220603\",\r\n        \"SPass\": 0,\r\n        \"LastModifiedDate\": \"2022-06-04T01:25:27.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 0,\r\n        \"RPass\": 0,\r\n        \"YearMonthDate\": \"20221229\",\r\n        \"SPass\": 0,\r\n        \"LastModifiedDate\": \"2022-12-29T23:10:36.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 0,\r\n        \"RPass\": 0,\r\n        \"YearMonthDate\": \"20221207\",\r\n        \"SPass\": 0,\r\n        \"LastModifiedDate\": \"2022-12-08T00:17:44.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 0,\r\n        \"RPass\": 0,\r\n        \"YearMonthDate\": \"20220609\",\r\n        \"SPass\": 0,\r\n        \"LastModifiedDate\": \"2022-06-09T20:33:49.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 0,\r\n        \"RPass\": 0,\r\n        \"YearMonthDate\": \"20221103\",\r\n        \"SPass\": 0,\r\n        \"LastModifiedDate\": \"2022-11-03T19:43:38.000Z\"\r\n    },\r\n    {\r\n        \"MasterLWF\": 0,\r\n        \"RPass\": 0,\r\n        \"YearMonthDate\": \"20221203\",\r\n        \"SPass\": 0,\r\n        \"LastModifiedDate\": \"2022-12-06T01:15:36.000Z\"\r\n    }\r\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/IRIS/Photo-Enquiry" : {
+      "get" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n    \"statusCode\": 1000,\r\n    \"responseMsg\": \"Successfully retrieved photos\",\r\n    \"personUIN\": \"S8012345Z\",\r\n    \"photoData\": [\r\n        \"data:image/;base64,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\",\r\n        \"data:image/jpeg;base64,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\",\r\n        \"data:image/jpeg;base64,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\"\r\n    ],\r\n    \"firstName\": \"Jason\",\r\n    \"lastName\": \"\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/ACRAPersonArrayiWORK" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"RCBMasterAddressID\": 15783487,\r\n        \"CpfbContactID\": 112261286,\r\n        \"CpfNo\": \"1907603\",\r\n        \"PrincipalA2\": \"31001\",\r\n        \"ContactID\": 15184727,\r\n        \"OwnerPosition\": \"S\",\r\n        \"AddressID\": 7254611,\r\n        \"EntryDate\": \"1990-01-02\",\r\n        \"RcbType\": \"01\",\r\n        \"RocbcNo\": \"42104500X\",\r\n        \"CompanyName\": \"SINGAPORE SLIPWAY & ENGINEERING (89)\",\r\n        \"CompanyStatus\": \"2\",\r\n        \"PrincipalA1\": \"31002\",\r\n        \"EmpName\": \"KEPPEL SINGMARINE PTE LTD\",\r\n        \"RegistrationDate\": \"1990-01-04\",\r\n        \"Identifier\": \"188700005K\",\r\n        \"DateOfBirth\": \"1965-02-15T00:00:00.000Z\",\r\n        \"PeopleName\": \"Jonathon Lee\",\r\n        \"Nationality\": \"MY\",\r\n        \"IdentifierType\": \"Fin\",\r\n        \"PrincipalA1Description\": \"FNB\",\r\n        \"PrincipalA2Description\": \"Shipping\",\r\n        \"TerminateDate\": \"2029-02-15T00:00:00.000Z\",\r\n        \"ApprovedCompanyInd\": \"M\",\r\n        \"RCBPeopleAddressID\": 658725\r\n    },\r\n    {\r\n        \"RCBMasterAddressID\": 15783487,\r\n        \"CpfbContactID\": 112261286,\r\n        \"CpfNo\": \"1907603\",\r\n        \"ContactID\": 15184727,\r\n        \"OwnerPosition\": \"S\",\r\n        \"AddressID\": 7254611,\r\n        \"EntryDate\": \"1998-10-01\",\r\n        \"RcbType\": \"01\",\r\n        \"RocbcNo\": \"52883055D\",\r\n        \"CompanyName\": \"KEPPEL SLAG\",\r\n        \"CompanyStatus\": \"2\",\r\n        \"PrincipalA1\": \"46659\",\r\n        \"EmpName\": \"KEPPEL SINGMARINE PTE LTD\",\r\n        \"RegistrationDate\": \"1998-12-31\",\r\n        \"Identifier\": \"188700005K\",\r\n        \"DateOfBirth\": \"1965-02-15T00:00:00.000Z\",\r\n        \"PeopleName\": \"Jonathon Lee\",\r\n        \"Nationality\": \"MY\",\r\n        \"IdentifierType\": \"Fin\",\r\n        \"PrincipalA1Description\": \"FNB\",\r\n        \"PrincipalA2Description\": \"Shipping\",\r\n        \"TerminateDate\": \"2029-02-15T00:00:00.000Z\",\r\n        \"ApprovedCompanyInd\": \"M\",\r\n        \"RCBPeopleAddressID\": 658725\r\n    },\r\n    {\r\n        \"ApprovedCompanyInd\": \" \",\r\n        \"RCBMasterAddressID\": 15783487,\r\n        \"CpfbContactID\": 112261287,\r\n        \"CpfNo\": \"1907654\",\r\n        \"PrincipalA2\": \"31001\",\r\n        \"ContactID\": 15184732,\r\n        \"OwnerPosition\": \"S\",\r\n        \"AddressID\": 7254611,\r\n        \"EntryDate\": \"1990-01-02\",\r\n        \"RcbType\": \"01\",\r\n        \"RocbcNo\": \"42104500X\",\r\n        \"CompanyName\": \"SINGAPORE SLIPWAY & ENGINEERING (89)\",\r\n        \"CompanyStatus\": \"2\",\r\n        \"PrincipalA1\": \"31002\",\r\n        \"EmpName\": \"KEPPEL SINGMARINE PTE LTD (JUNIOR STAFF)\",\r\n        \"RegistrationDate\": \"1990-01-04\",\r\n        \"Identifier\": \"188700005K\",\r\n        \"DateOfBirth\": \"1965-02-15T00:00:00.000Z\",\r\n        \"PeopleName\": \"Jonathon Lee\",\r\n        \"Nationality\": \"MY\",\r\n        \"IdentifierType\": \"Fin\",\r\n        \"PrincipalA1Description\": \"FNB\",\r\n        \"PrincipalA2Description\": \"Shipping\",\r\n        \"TerminateDate\": \"2029-02-15T00:00:00.000Z\",\r\n        \"ApprovedCompanyInd\": \"M\",\r\n        \"RCBPeopleAddressID\": 658725\r\n    },\r\n    {\r\n        \"ApprovedCompanyInd\": \" \",\r\n        \"RCBMasterAddressID\": 15783487,\r\n        \"CpfbContactID\": 112261287,\r\n        \"CpfNo\": \"1907654\",\r\n        \"ContactID\": 15184732,\r\n        \"OwnerPosition\": \"S\",\r\n        \"AddressID\": 7254611,\r\n        \"EntryDate\": \"1998-10-01\",\r\n        \"RcbType\": \"01\",\r\n        \"RocbcNo\": \"52883055D\",\r\n        \"CompanyName\": \"KEPPEL SLAG\",\r\n        \"CompanyStatus\": \"2\",\r\n        \"PrincipalA1\": \"46659\",\r\n        \"EmpName\": \"KEPPEL SINGMARINE PTE LTD (JUNIOR STAFF)\",\r\n        \"RegistrationDate\": \"1998-12-31\",\r\n        \"Identifier\": \"188700005K\",\r\n        \"DateOfBirth\": \"1965-02-15T00:00:00.000Z\",\r\n        \"PeopleName\": \"Jonathon Lee\",\r\n        \"Nationality\": \"MY\",\r\n        \"IdentifierType\": \"Fin\",\r\n        \"PrincipalA1Description\": \"FNB\",\r\n        \"PrincipalA2Description\": \"Shipping\",\r\n        \"TerminateDate\": \"2029-02-15T00:00:00.000Z\",\r\n        \"ApprovedCompanyInd\": \"M\",\r\n        \"RCBPeopleAddressID\": 658725\r\n    }\r\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/MIWA/searchAddresses/PostalCode" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\"results\":[{\"addressType\":\"POSTAL_CODE\",\"addressInfo\":{\"postalCode\":\"627844\",\"dormitoryName\":\"Blue Stars Dormitory\",\"buildingName\":\"BLUE STARS DORMITORY\",\"streetName\":\"KIAN TECK LANE\",\"blocks\":[{\"blockHouseNumber\":\"11\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"01\",\"units\":[{\"unitNumber\":\"37\"},{\"unitNumber\":\"38\"}]},{\"floorNumber\":\"03\",\"units\":[{\"unitNumber\":\"39\"},{\"unitNumber\":\"43\"}]},{\"floorNumber\":\"04\",\"units\":[{\"unitNumber\":\"38\"},{\"unitNumber\":\"39\"},{\"unitNumber\":\"40\"},{\"unitNumber\":\"41\"}]},{\"floorNumber\":\"\",\"units\":[{\"unitNumber\":\"\"}]}]},{\"blockHouseNumber\":\"13\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"06\",\"units\":[{\"unitNumber\":\"0655\"},{\"unitNumber\":\"0656\"}]},{\"floorNumber\":\"\",\"units\":[{\"unitNumber\":\"\"}]}]},{\"blockHouseNumber\":\"03\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"01\",\"units\":[{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"}]},{\"floorNumber\":\"03\",\"units\":[{\"unitNumber\":\"04\"}]},{\"floorNumber\":\"04\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"}]},{\"floorNumber\":\"05\",\"units\":[{\"unitNumber\":\"06\"}]}]},{\"blockHouseNumber\":\"3\",\"buildingCode\":\"C09\",\"floors\":[{\"floorNumber\":\"01\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"},{\"unitNumber\":\"11\"},{\"unitNumber\":\"12\"},{\"unitNumber\":\"15\"},{\"unitNumber\":\"16\"},{\"unitNumber\":\"18\"},{\"unitNumber\":\"19\"},{\"unitNumber\":\"25\"},{\"unitNumber\":\"33\"},{\"unitNumber\":\"34\"},{\"unitNumber\":\"36\"},{\"unitNumber\":\"37\"},{\"unitNumber\":\"38\"},{\"unitNumber\":\"39\"},{\"unitNumber\":\"40\"},{\"unitNumber\":\"48\"},{\"unitNumber\":\"52\"},{\"unitNumber\":\"54\"},{\"unitNumber\":\"57\"}]},{\"floorNumber\":\"02\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"},{\"unitNumber\":\"09\"},{\"unitNumber\":\"10\"},{\"unitNumber\":\"11\"},{\"unitNumber\":\"12\"},{\"unitNumber\":\"13\"},{\"unitNumber\":\"14\"},{\"unitNumber\":\"15\"},{\"unitNumber\":\"16\"},{\"unitNumber\":\"17\"},{\"unitNumber\":\"21\"},{\"unitNumber\":\"33\"},{\"unitNumber\":\"34\"},{\"unitNumber\":\"35\"},{\"unitNumber\":\"37\"},{\"unitNumber\":\"38\"},{\"unitNumber\":\"39\"},{\"unitNumber\":\"47\"},{\"unitNumber\":\"50\"},{\"unitNumber\":\"51\"},{\"unitNumber\":\"52\"},{\"unitNumber\":\"53\"},{\"unitNumber\":\"54\"},{\"unitNumber\":\"553\"},{\"unitNumber\":\"60\"},{\"unitNumber\":\"61\"},{\"unitNumber\":\"64\"}]},{\"floorNumber\":\"03\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"},{\"unitNumber\":\"09\"},{\"unitNumber\":\"19\"},{\"unitNumber\":\"26\"},{\"unitNumber\":\"27\"},{\"unitNumber\":\"28\"},{\"unitNumber\":\"29\"},{\"unitNumber\":\"38\"},{\"unitNumber\":\"39\"},{\"unitNumber\":\"40\"},{\"unitNumber\":\"41\"},{\"unitNumber\":\"42\"},{\"unitNumber\":\"43\"},{\"unitNumber\":\"44\"},{\"unitNumber\":\"48\"},{\"unitNumber\":\"51\"},{\"unitNumber\":\"52\"},{\"unitNumber\":\"53\"},{\"unitNumber\":\"54\"},{\"unitNumber\":\"55\"},{\"unitNumber\":\"56\"},{\"unitNumber\":\"59\"},{\"unitNumber\":\"60\"},{\"unitNumber\":\"61\"},{\"unitNumber\":\"62\"},{\"unitNumber\":\"63\"},{\"unitNumber\":\"64\"}]},{\"floorNumber\":\"04\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"},{\"unitNumber\":\"11\"},{\"unitNumber\":\"12\"},{\"unitNumber\":\"14\"},{\"unitNumber\":\"15\"},{\"unitNumber\":\"16/17\"},{\"unitNumber\":\"18/19\"},{\"unitNumber\":\"26\"},{\"unitNumber\":\"27\"},{\"unitNumber\":\"31\"},{\"unitNumber\":\"32\"},{\"unitNumber\":\"35\"},{\"unitNumber\":\"36\"},{\"unitNumber\":\"37\"},{\"unitNumber\":\"38\"},{\"unitNumber\":\"39\"},{\"unitNumber\":\"40\"},{\"unitNumber\":\"41\"},{\"unitNumber\":\"47\"},{\"unitNumber\":\"49\"},{\"unitNumber\":\"50\"},{\"unitNumber\":\"53\"},{\"unitNumber\":\"57\"},{\"unitNumber\":\"58\"}]},{\"floorNumber\":\"05\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"},{\"unitNumber\":\"10\"},{\"unitNumber\":\"11\"},{\"unitNumber\":\"12\"},{\"unitNumber\":\"13\"},{\"unitNumber\":\"14\"},{\"unitNumber\":\"15\"},{\"unitNumber\":\"16\"},{\"unitNumber\":\"17\"},{\"unitNumber\":\"18\"},{\"unitNumber\":\"19\"},{\"unitNumber\":\"21\"},{\"unitNumber\":\"23\"},{\"unitNumber\":\"24\"},{\"unitNumber\":\"29\"},{\"unitNumber\":\"32\"},{\"unitNumber\":\"41\"},{\"unitNumber\":\"54\"},{\"unitNumber\":\"56\"},{\"unitNumber\":\"60\"},{\"unitNumber\":\"62\"}]},{\"floorNumber\":\"06\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"07\"},{\"unitNumber\":\"08\"},{\"unitNumber\":\"09\"},{\"unitNumber\":\"10\"},{\"unitNumber\":\"11\"},{\"unitNumber\":\"12\"},{\"unitNumber\":\"13\"},{\"unitNumber\":\"17\"},{\"unitNumber\":\"19\"},{\"unitNumber\":\"20\"},{\"unitNumber\":\"22\"},{\"unitNumber\":\"23\"},{\"unitNumber\":\"24\"},{\"unitNumber\":\"25\"},{\"unitNumber\":\"26\"},{\"unitNumber\":\"38\"},{\"unitNumber\":\"44\"},{\"unitNumber\":\"46\"},{\"unitNumber\":\"53\"},{\"unitNumber\":\"54\"},{\"unitNumber\":\"56\"}]},{\"floorNumber\":\"07\",\"units\":[{\"unitNumber\":\"01\"},{\"unitNumber\":\"02\"},{\"unitNumber\":\"03\"},{\"unitNumber\":\"04\"},{\"unitNumber\":\"05\"},{\"unitNumber\":\"06\"},{\"unitNumber\":\"26\"},{\"unitNumber\":\"60\"},{\"unitNumber\":\"61\"}]},{\"floorNumber\":\"11\",\"units\":[{\"unitNumber\":\"42\"}]},{\"floorNumber\":\"13\",\"units\":[{\"unitNumber\":\"08\"},{\"unitNumber\":\"18\"}]},{\"floorNumber\":\"2\",\"units\":[{\"unitNumber\":\"38\"},{\"unitNumber\":\"6\"}]},{\"floorNumber\":\"4\",\"units\":[{\"unitNumber\":\"12\"}]},{\"floorNumber\":\"5\",\"units\":[{\"unitNumber\":\"17\"}]},{\"floorNumber\":\"RM\",\"units\":[{\"unitNumber\":\"A156\"}]}]},{\"blockHouseNumber\":\"15\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"01\",\"units\":[{\"unitNumber\":\"57\"},{\"unitNumber\":\"60\"}]},{\"floorNumber\":\"04\",\"units\":[{\"unitNumber\":\"57\"},{\"unitNumber\":\"58\"},{\"unitNumber\":\"61\"},{\"unitNumber\":\"62\"},{\"unitNumber\":\"63\"}]},{\"floorNumber\":\"05\",\"units\":[{\"unitNumber\":\"62\"},{\"unitNumber\":\"63\"},{\"unitNumber\":\"64\"}]},{\"floorNumber\":\"06\",\"units\":[{\"unitNumber\":\"58\"},{\"unitNumber\":\"59\"},{\"unitNumber\":\"60\"}]},{\"floorNumber\":\"\",\"units\":[{\"unitNumber\":\"\"}]}]},{\"blockHouseNumber\":\"5\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"\",\"units\":[{\"unitNumber\":\"\"}]}]},{\"blockHouseNumber\":\"05\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"02\",\"units\":[{\"unitNumber\":\"10\"},{\"unitNumber\":\"11\"},{\"unitNumber\":\"12\"},{\"unitNumber\":\"13\"},{\"unitNumber\":\"14\"},{\"unitNumber\":\"15\"},{\"unitNumber\":\"16\"},{\"unitNumber\":\"17\"}]},{\"floorNumber\":\"06\",\"units\":[{\"unitNumber\":\"13\"},{\"unitNumber\":\"20\"}]}]},{\"blockHouseNumber\":\"7\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"05\",\"units\":[{\"unitNumber\":\"21\"}]},{\"floorNumber\":\"\",\"units\":[{\"unitNumber\":\"\"}]}]},{\"blockHouseNumber\":\"07\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"03\",\"units\":[{\"unitNumber\":\"27\"}]},{\"floorNumber\":\"04\",\"units\":[{\"unitNumber\":\"0428\"}]}]},{\"blockHouseNumber\":\"9\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"02\",\"units\":[{\"unitNumber\":\"33\"}]},{\"floorNumber\":\"\",\"units\":[{\"unitNumber\":\"\"}]}]},{\"blockHouseNumber\":\"09\",\"buildingCode\":null,\"floors\":[{\"floorNumber\":\"05\",\"units\":[{\"unitNumber\":\"0529\"}]}]}]}}]}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/bcaUpdateRequest" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n      <ns1:bcaUpdateRequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n         <bcaUpdateRequestReturn xsi:type=\"ns2:BCAUpdateResponseVO\" xmlns:ns2=\"urn:BCAUpdateResponseVO\">\n            <errorCode xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <errorMsg xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <spNo xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">AA000390</spNo>\n            <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">S</status>\n         </bcaUpdateRequestReturn>\n      </ns1:bcaUpdateRequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/EmployerEPassCount" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\n    {\n        \"E_PASS\": 2310\n    }\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/IRIS/Send-Screening-Request" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n  \"statusCode\": \"1000\",\r\n  \"responseMessage\": \"Screening request received and acknowledged\",\r\n  \"sr_id_from_iris\": \"IRIS_20230523_001\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updateSpecialPassExtension" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:impl=\"http://impl.service.casemgmt.csm.app.interfaces.inform.mom.gov.sg\" xmlns:xsd=\"http://csm.app.interfaces.inform.mom.gov.sg/xsd\" xmlns:xsd1=\"http://model.casemgmt.csm.app.interfaces.inform.mom.gov.sg/xsd\">\n   <soap:Header/>\n   <soap:Body>\n      <impl:updateSpecialPassExtensionResponse>\n         <!--Optional:-->\n         <impl:return>\n            <!--Zero or more repetitions:-->\n            <xsd:errors>\n               <!--Optional:-->\n               <xsd:errorCode></xsd:errorCode>\n               <!--Optional:-->\n               <xsd:errorMsg>Invalid SP number is passsed</xsd:errorMsg>\n            </xsd:errors>\n            <!--Optional:-->\n            <xsd:status>Error</xsd:status>\n            <!--Optional:-->\n            <xsd1:errorCode></xsd1:errorCode>\n            <!--Optional:-->\n            <xsd1:errorMsg></xsd1:errorMsg>\n            <!--Optional:-->\n            <xsd1:spNo></xsd1:spNo>\n            <!--Optional:-->\n            <xsd1:status></xsd1:status>\n         </impl:return>\n      </impl:updateSpecialPassExtensionResponse>\n   </soap:Body>\n</soap:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/HarbourCraftDetails" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\n    {\n        \"VesselLicenseNo\": \"SZH2354E\",\n        \"CraftName\": \"Domestic Vessel\"\n    }\n]    "
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/iWORK/InformReject" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n    \"ReturnCode\": \"00\",\r\n    \"ReturnMessage\": \"Successful\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/iWPS/Place-worker-BL002" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<PlaceWorkerBLResponse>\r\n<STATUS>true</STATUS>\r\n<ERROR_MESSAGE></ERROR_MESSAGE>\r\n</PlaceWorkerBLResponse>\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/IRIS/Download-Screening-Results" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "#set($inputRoot = $input.path('$'))\r\n\r\n{\r\n  \"statusCode\": 200,\r\n  \"headers\": {\r\n    \"Content-Type\": \"application/pdf\",\r\n    \"Content-Disposition\": \"attachment; filename=\\\"report.pdf\\\"\"\r\n  },\r\n  \"body\": \"$util.base64Encode('%PDF-1.4\\n%ãÏÓ\\n1 0 obj\\n<< /Type /Catalog /Pages 2 0 R >>\\nendobj\\n')\",\r\n  \"isBase64Encoded\": true\r\n}\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/IRIS/Request-for-Screening-Results" : {
+      "get" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n  \"statusCode\": \"1000\",\r\n  \"responseMessage\": \"Successfully requested for screening results\",\r\n  \"sr_id_from_iris\": \"IRIS_20230523_001\"\r\n  \"download_url\":\"https://iris.mom.gov.sg/download/s32jkd98ds\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/IndividualSPDetails" : {
+      "get" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\n  {\n    \"wp_no\": \"0 63144169\",\n    \"doc\": \"2011-08-25T08:15:50.000Z\",\n    \"travel_doc_expiry_date\": \"2013-06-08T16:00:00.000Z\",\n    \"extension_doi\": \"2011-08-17T16:00:00.000Z\",\n    \"closed_by\": \"Roszaimi Bin Abas\",\n    \"reason\": \"1\",\n    \"doa\": \"2008-12-29T16:00:00.000Z\",\n    \"nationality\": \"BD\",\n    \"issued_by\": \"Sun Neo Ying\",\n    \"fin\": \"G8463702K\",\n    \"travel_doc_number\": \"G8463702K\",\n    \"sp_no\": \"AD272715\",\n    \"creation_officer\": \"Sun Neo Ying\",\n    \"created_by\": 1044,\n    \"status\": \"CLOSED\",\n    \"doi\": \"2011-04-17T16:00:00.000Z\",\n    \"name\": \"G8463702K\",\n    \"doe\": \"2011-08-24T16:00:00.000Z\",\n    \"request_reason\": \"WICB\",\n    \"dob\": \"1983-10-04\",\n    \"closed_reason\": \"For repatriation\",\n    \"contact_number\": \"63338888\",\n    \"auto_ext_ind\": \"F\",\n    \"case_reference_no\": \"W-20100700263\",\n    \"sp_no_ext\": \"AD272715\",\n    \"ext_expiry_dt\": \"2011-08-24T16:00:00.000Z\",\n    \"ext_old_expiry_dt\": \"2011-08-17T16:00:00.000Z\",\n    \"ext_issued_by\": \"Hee-Tan Lily\"\n  }\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/IndividualWpStatus" : {
+      "get" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n\t\"EmployerContact\": \"69237473\",\r\n\t\"PassStatus\": \"K\",\r\n\t\"WorkerSBStatus\": \"Your status has been approved.\",\r\n\t\"SBExpiryDate\": \"2030-05-13T00:00:00.000Z\",\r\n\t\"IssueDate\": \"2018-11-28T00:00:00.000Z\",\r\n\t\"ExpiryDate\": \"2029-10-28T00:00:00.000Z\",\r\n\t\"RevokeCancelDate\": \"2029-10-31T00:00:00.000Z\",\r\n\t\"Occupation\": \"72413\",\r\n\t\"RenewalDate\": \"2029-12-01T00:00:00.000Z\",\r\n\t\"ReinstatementDate\": \"2029-12-14T00:00:00.000Z\",\r\n\t\"ROCBNo\": \"201510554Z\",\r\n\t\"DateOfApplication\": \"2018-10-20T00:00:00.000Z\",\r\n\t\"EntityName\": \"HH INTEGRATED PTE. LTD.\",\r\n\t\"Industry\": \"41001\",\r\n\t\"CpfNo\": \"8624666\",\r\n\t\"DecisionReason\": \"842C\",\r\n\t\"WpNo\": \"0 34608261\",\r\n\t\"TpDate\": \"2024-10-11T00:00:00.000Z\",\r\n\t\"WorkerArrivalDate\": \"2023-10-11T00:00:00.000Z\",\r\n\t\"ActualDepartDate\": \"2023-12-11T00:00:00.000Z\",\r\n\t\"AddressCategory\": \"BA\",\r\n\t\"EmployerAddress\": \"53 WOODLANDS INDUSTRIAL PARK E2 #00-00NORDIX SINGAPORE 757473\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WinsWorkerAddressInfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"AddressType\": \"SGT\",\r\n        \"BlockHouseNo\": \"30   \",\r\n        \"BuildingName\": \"HIGH POINT\",\r\n        \"FIN\": \"F0012749M\",\r\n        \"UnitNo\": \"32   \",\r\n        \"StreetName\": \"MOUNT ELIZABETH\",\r\n        \"FloorNo\": \"08\",\r\n        \"PostalCode\": \"228519\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/LocalNRICLookup" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\n    {\n        \"spec\": \"not provided\"\n    }\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WinsWorkerApplicationInfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"BasicMonthlySalary\": 7500,\r\n        \"SSIC\": \"64202\",\r\n        \"IssueDate\": \"2019-11-28T00:00:00.000Z\",\r\n        \"IsCoyRelated\": 1,\r\n        \"SubmissionCompanyCode\": \"53220398D001\",\r\n        \"DocumentNo\": \"A50816686\",\r\n        \"DateOfApplication\": \"2019-10-04T00:00:00.000Z\",\r\n        \"Gender\": \"F\",\r\n        \"MaritalStatus\": \"2\",\r\n        \"ApplicationStatus\": \"CC\",\r\n        \"PassType\": \"EPP\",\r\n        \"CompanyCode\": \"201929172001\",\r\n        \"ApplicationId\": 800014388129,\r\n        \"DivisionCode\": \"00\",\r\n        \"CompanyPostalCode\": \"069917\",\r\n        \"CompanyStatus\": \"N\",\r\n        \"CancellationDate\": \"2021-09-07T00:00:00.000Z\",\r\n        \"CancelReason\": \"MIGCEMPXC\",\r\n        \"FixedMonthlySalary\": 7500,\r\n        \"ExpiryDate\": \"2021-11-28T00:00:00.000Z\",\r\n        \"OutcomeDate\": \"2019-11-25T18:12:44.000Z\",\r\n        \"DateOfBirth\": \"1951-05-18T00:00:00.000Z\",\r\n        \"CompanyStreetName\": \"AMOY STREET\",\r\n        \"FIN\": \"F0012749M\",\r\n        \"ReasonType\": \"NEW\",\r\n        \"CompanyBlockNo\": \"97A\",\r\n        \"NameOfApplicant\": \"EP F0012749M\",\r\n        \"BranchCode\": \"000\",\r\n        \"Nationality\": \"MY\",\r\n        \"CompanyName\": \"RTCM VENTURES PTE. LTD.\",\r\n        \"UEN\": \"201929172E\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/EmployerCSNIndustry" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"CpfNo\": \"1044664\",\r\n        \"UEN\": \"199906411R\",\r\n        \"PaymentCode\": \"01\",\r\n        \"PaymentMode\": \"PTE\",\r\n        \"Industry\": \"61099\",\r\n        \"ApprovedCompanyIndustry\": \"U\",\r\n        \"IndustryDescription\": \"Shipping\"\r\n    }\r\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_templates",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/updSPDOERequest" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n      <ns1:updSPDOERequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n         <updSPDOERequestReturn xsi:type=\"ns2:updateSPResponseVO\" xmlns:ns2=\"urn:updateSPResponseVO\">\n            <errorCode xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">005</errorCode>\n            <errorMsg xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">New Expiry Date must between 1 and 28 days</errorMsg>\n            <spNo xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">AA000390</spNo>\n            <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">F</status>\n         </updSPDOERequestReturn>\n      </ns1:updSPDOERequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/IRIS/Get-Screening-Request-Status" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "{\r\n  \"statusCode\": \"1000\",\r\n  \"responseMessage\": \"Successfully retreived screening results\",\r\n  \"sr_status\" : \"Completed\"\r\n}"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/ISPS/createSPRequest" : {
+      "post" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/xml" : "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <soapenv:Body>\n      <ns1:createSPRequestResponse soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://ws.webservice.isps.com\">\n         <createSPRequestReturn xsi:type=\"ns2:createSPResponseVO\" xmlns:ns2=\"urn:createSPResponseVO\">\n            <errorCode xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">037</errorCode>\n            <errorMsg xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">RECORD NOT FOUND IN EPOL</errorMsg>\n            <spNo xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <spStatus xsi:type=\"soapenc:string\" xsi:nil=\"true\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n            <status xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">F</status>\n         </createSPRequestReturn>\n      </ns1:createSPRequestResponse>\n   </soapenv:Body>\n</soapenv:Envelope>"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/WinsSTVPinfo" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"STVPStatus\": \"C\",\r\n        \"PeriodOfStay\": 60,\r\n        \"FIN\": \"F0012749M\",\r\n        \"ExpiryDate\": \"2021-11-06T00:00:00.000Z\",\r\n        \"IssueDate\": \"2021-09-07T00:00:00.000Z\"\r\n    }\r\n]\r\n"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/IndividualNRRDetails" : {
+      "get" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n    {\r\n        \"Race\": \"CN\",\r\n        \"UpdatedDateTime\": \"2021-09-22T17:43:16.576Z\",\r\n        \"Religion\": \"C\",\r\n        \"FIN\": \"F0012749M\",\r\n        \"Nationality\": \"MY\"\r\n    }\r\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    },
+    "/RDI/GetInformNRR" : {
+      "get" : {
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Empty"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "responses" : {
+            "default" : {
+              "statusCode" : "200",
+              "responseTemplates" : {
+                "application/json" : "[\r\n{\r\n\"Token\": \"q0iumd36mu\",\r\n\"DataTypeCode\": \"RAC\",\r\n\"DataValueCode\": \"CN:\", \r\n\"CreationDateTime\": \"2022-10-11T11:12:05:23.586Z\",\r\n\"CreatedBy\": \"iWork App\",\r\n\"IDType\": \"NRIC\",\r\n\"IDValue\": \"S1234567A\"\r\n},\r\n{\r\n\"Token\": \"q0iumd36mu\",\r\n\"DataTypeCode\": \"NAT\",\r\n\"DataValueCode\": \"SG\", \r\n\"CreationDateTime\": \"2022-10-11T11:12:06:15.236Z\",\r\n\"CreatedBy\": \"iWork App\",\r\n\"IDType\": \"NRIC\",\r\n\"IDValue\": \"S1234567A\"\r\n} \r\n]"
+              }
+            }
+          },
+          "requestTemplates" : {
+            "application/json" : "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Empty" : {
+        "title" : "Empty Schema",
+        "type" : "object"
+      }
+    }
+  },
+  "x-amazon-apigateway-policy" : {
+    "Version" : "2012-10-17",
+    "Statement" : [ {
+      "Effect" : "Allow",
+      "Principal" : "*",
+      "Action" : "execute-api:Invoke",
+      "Resource" : "arn:aws:execute-api:ap-southeast-1:509399634562:21d7b0dw4g/*"
+    }, {
+      "Effect" : "Deny",
+      "Principal" : "*",
+      "Action" : "execute-api:Invoke",
+      "Resource" : "arn:aws:execute-api:ap-southeast-1:509399634562:21d7b0dw4g/*",
+      "Condition" : {
+        "StringNotEquals" : {
+          "aws:SourceVpce" : "vpce-09bf3223fc8a3c35e"
+        }
+      }
+    } ]
+  }
+}
